@@ -1,0 +1,17 @@
+.todoContainer {
+  text-align: center;
+  margin-top: 25px;
+  padding: 25px;
+  width: 70%;
+}
+
+body {
+  background-color: #dec0f1;
+}
+
+@media screen and (max-width: 480px) {
+  .todoContainer {
+    width: 80%;
+    border: none;
+  }
+}
