@@ -32,11 +32,13 @@ span {
     height: 40px;
     display: flex;
     width: 90%;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
     margin-top: 0px;
   }
   button {
     font-size: 12px;
+    margin: 5px;
   }
 
   .taskList {
