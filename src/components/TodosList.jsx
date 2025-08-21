@@ -10,20 +10,21 @@ const TodosList = ({
   isDisabled,
 }) => {
   return (
-    <div className={` container ${styles.todosListContainer}`}>
+    <div className={"${container text-center}"}>
       {todos.map((todo) => (
-        <div key={todo.taskId} className={`${styles.todoItemDiv}`}>
-          <div className={styles.todoItem}>
-            <span>{todo.taskName}</span>
-            <span>{todo.dueDate}</span>
-          </div>
-          <div className={styles.btnContainer}>
+        <div key={todo.taskId} className={`row todoRow`}>
+          <div className={" my-col col-4"}>{todo.taskName}</div>
+          <div className={"my-col col-4"}>{todo.dueDate}</div>
+
+          <div className="my-col col-2">
             <button
               className={`btn btn-success`}
               onClick={() => markAsDoneHandler(todo.taskId)}
             >
               Mark as Done
             </button>
+          </div>
+          <div className="my-col col-2">
             <button
               className={`btn btn-danger`}
               onClick={() => deleteSingleTodo(todo.taskId)}
@@ -33,20 +34,26 @@ const TodosList = ({
           </div>
         </div>
       ))}
-      <div className={styles.nextBtnContainer}>
-        <button className="btn btn-primary" onClick={markAllAsDoneHandler}>
-          Mark All As Done
-        </button>
-        <button className="btn btn-danger" onClick={deleteAllTodos}>
-          Delete All Tasks
-        </button>
-        <button
-          className="btn btn-warning"
-          onClick={undoDeletedTasks}
-          disabled={isDisabled}
-        >
-          Undo Delete All Tasks
-        </button>
+      <div className={`row ${styles.btnContainer}`}>
+        <div className="col-4">
+          <button className="btn btn-primary" onClick={markAllAsDoneHandler}>
+            Mark All As Done
+          </button>
+        </div>
+        <div className="col-4">
+          <button className="btn btn-danger" onClick={deleteAllTodos}>
+            Delete All Tasks
+          </button>
+        </div>
+        <div className="col-4">
+          <button
+            className="btn btn-secondary"
+            onClick={undoDeletedTasks}
+            disabled={isDisabled}
+          >
+            Undo Delete All Tasks
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -39,6 +39,7 @@ span {
   button {
     font-size: 12px;
     margin: 5px;
+    width: 300px;
   }
 
   .taskList {

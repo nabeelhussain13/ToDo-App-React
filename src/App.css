@@ -6,12 +6,36 @@
 }
 
 body {
-  background-color: #f4f1de;
+  background-color: #bbd1ea;
+}
+
+input:focus {
+  outline: none;
+}
+
+.todoRow {
+  margin-top: 15px;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {
   .todoContainer {
     width: 80%;
     border: none;
+  }
+
+  .todoRow {
+    width: 320px;
+    margin-left: 3px;
+  }
+
+  .todoRow button {
+    width: 160px;
+  }
+
+  .my-col {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: 5px;
   }
 }

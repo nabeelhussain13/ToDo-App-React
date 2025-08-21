@@ -19,7 +19,7 @@ const CompletedTodosList = ({
           Clear All
         </button>
         <button
-          className="btn btn-warning"
+          className="btn btn-secondary"
           onClick={undoClearAll}
           disabled={undoClearAllIsDisabled}
         >
