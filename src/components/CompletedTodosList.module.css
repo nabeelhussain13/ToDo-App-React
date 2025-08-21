@@ -29,7 +29,6 @@ span {
 
 @media screen and (max-width: 480px) {
   .completedBtnContainer {
-    height: 40px;
     display: flex;
     width: 90%;
     display: flex;
@@ -37,9 +36,8 @@ span {
     margin-top: 0px;
   }
   button {
-    font-size: 12px;
     margin: 5px;
-    width: 300px;
+    width: 19rem;
   }
 
   .taskList {
